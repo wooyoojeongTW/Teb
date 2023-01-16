@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="css/style.css">
+    <script src="jquery-1.12.4.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="testimonial-section">
+        <h1>Contributors</h1>
+        <div class="testimonial-pic">
+            <img class="active" src="img/jiae1.jpg" alt="" data-alt="tab1">
+            <img src="img/milkj.jpeg" alt=""data-alt="tab2">
+            <img src="img/milkj.jpeg" alt=""data-alt="tab3">
+            <img src="img/milkj.jpeg" alt=""data-alt="tab4">
+            <img src="img/milkj.jpeg" alt=""data-alt="tab5">
+        </div>
+        <div class="testimonial">
+            <div class="content active" id="tab1">
+                <p>윤지애</p>
+                <p class="nickname">PL</p>
+                <p>항상 도전하고 성장하는 프론트엔드 개발자입니다.
+                    많은 사람들과 소통하며 발전할 수 있어 좋았습니다.</p>
+                    
+            </div>
+            <div class="content" id="tab2">
+                <p>밀크정</p>
+                    <p class="nickname">디자이너</p>
+                    <p>우유는 생우유도 요구르트로도 치즈로도 변신할 수 있습니다. 지금은 우유지만 저를 성장시켜 
+                        좀 더 성숙한 치즈와 요구르트가 되고 싶습니다.</p>
+            </div>
+            <div class="content" id="tab3">
+                <p> </p>
+                </p><p class="nickname"></p>
+            </div>
+            <div class="content" id="tab4">
+                <p></p>
+                    <p class="nickname"></p>
+            </div>
+            <div class="content" id="tab5">
+                <p>
+                </p>
+                <p class="nickname"></p>
+            </div>
+        </div>
+        <div class="testimonial-pic">
+            <img class="active" src="img/minji.jpeg" alt="" data-alt="tab1">
+            <img src="img/milkj.jpeg" alt=""data-alt="tab2">
+            <img src="img/milkj.jpeg" alt=""data-alt="tab3">
+            <img src="img/milkj.jpeg" alt=""data-alt="tab4">
+            <img src="img/milkj.jpeg" alt=""data-alt="tab5">
+        </div>
+    </div>
+</body>
+<script>
+    $('.testimonial-pic img').click(function(){
+        $(this).addClass('active')
+        $(this).siblings().removeClass('active')
+    
+        $('.testimonial .content').removeClass('active')
+        $('#' + $(this).attr('data-alt')).addClass('active')
+        //#tab1 == $(this).attr('data-alt')
+
+    })
+</script>
+</html>
